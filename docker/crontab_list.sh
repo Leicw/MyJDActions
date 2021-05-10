@@ -2,8 +2,6 @@
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
 ##############短期活动##############
-# 超级直播间红包雨
-0,30,31 20-23/1 * * * node /scripts/jd_liveredrain.js >> /scripts/logs/jd_liveredrain.log 2>&1
 #金口碑奖投票
 1 0,8 * * * node /scripts/jd_mgold.js >> /scripts/logs/jd_mgold.log 2>&1
 #jd_oneplus盲盒
@@ -28,6 +26,8 @@
 13 1,22,23 * * * node /scripts/jd_daily_lottery.js >> /scripts/logs/jd_daily_lottery.log 2>&1
 #jd_beauty
 1 7,12,19 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
+#jd_ETIP
+15 8 9-13 5 * node /scripts/jd_ETIP.js >> /scripts/logs/jd_ETIP.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
