@@ -8,8 +8,6 @@
 40 0,8 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
 #jd_shoplottery
 10 15 * * * node /scripts/jd_shoplottery.js >> /scripts/logs/jd_shoplottery.log 2>&1
-#jd_jump_jump
-10 20 * * * node /scripts/jd_jump_jump.js >> /scripts/logs/jd_jump_jump.log 2>&1
 #jd_health
 13 1,22 * * * node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
 #jd_health_collect
@@ -26,6 +24,13 @@
 13 1,22,23 * * * node /scripts/jd_daily_lottery.js >> /scripts/logs/jd_daily_lottery.log 2>&1
 #jd_beauty
 1 7,12,19 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
+#jd_live_redrain
+0,30 0-23/1 * * * node /scripts/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
+#女装盲盒 活动时间：2021-05-1到2021-05-31
+35 1,22 * * * node /scripts/jd_nzmh.js >> /scripts/logs/jd_nzmh.log 2>&1
+#京享值pk 活动时间：2021-05-17到2021-05-31
+15 10,15,18 17-31 5 * node /scripts/jd_pk.js >> /scripts/logs/jd_pk.log 2>&1
+
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
