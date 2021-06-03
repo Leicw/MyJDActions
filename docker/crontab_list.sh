@@ -47,7 +47,19 @@
 #jd_babelDiy
 30 12 * * * node /scripts/jd_babelDiy.js >> /scripts/logs/jd_babelDiy.log 2>&1
 #星店长
-5 7 * * * node /scripts/jd_starStore.js >> /scripts/logs/jd_starStore.log 2>&1
+0 1,21 * * * node /scripts/jd_star_shop.js >> /scripts/logs/jd_star_shop.log 2>&1
+#明星小店
+5 9 * * * node /scripts/jd_starStore.js >> /scripts/logs/jd_starStore.log 2>&1
+#主会场红包雨
+1 20 1-18 6 * node /scripts/jd_hby_lottery.js >> /scripts/logs/jd_hby_lottery.log 2>&1
+#5g超级盲盒
+0 */4 * * * node /scripts/jd_mohe.js >> /scripts/logs/jd_mohe.log 2>&1
+#龙舟
+15 13 1-18 6 * node /scripts/jd_dragonboat.js >> /scripts/logs/jd_dragonboat.log 2>&1
+#新潮品牌狂欢
+30 9,10 1-18 6 * node /scripts/jd_mcxhd_brandcity.js >> /scripts/logs/jd_mcxhd_brandcity.log 2>&1
+#品牌狂欢城
+30 10 1-18 6 * node /scripts/jd_brandcarnivalcity.js >> /scripts/logs/jd_brandcarnivalcity.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -129,8 +141,6 @@
 10 * * * *  node /scripts/jd_cfd.js >> /scripts/logs/jd_cfd.log 2>&1
 # 京喜财富岛提现
 0 0 * * *  node /scripts/jx_cfdtx.js >> /scripts/logs/jx_cfdtx.log 2>&1
-# 京东价格保护
-10 0 */3 * *  node /scripts/jd_priceProtect.js >> /scripts/logs/jd_priceProtect.log 2>&1
 # 京东极速版
 48 0,12,18 * * *  node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 # 京东抽奖机
@@ -138,12 +148,13 @@
 # 宠汪汪兑换
 0 0,8,12,16 * * * node /scripts/jd_joy_reward.js >> /scripts/logs/jd_joy_reward.log 2>&1
 # 京东疯狂的JOY挂机
-5 5 */2 * *  node /scripts/jd_crazy_joy_coin.js >> /scripts/logs/jd_crazy_joy_coin.log 2>&1
+5 5 */2 * * node /scripts/jd_crazy_joy_coin.js >> /scripts/logs/jd_crazy_joy_coin.log 2>&1
 # 京东摇一摇
-0 1,17 * * *   node /scripts/jd_shake.js >> /scripts/logs/jd_shake.log 2>&1
+0 1,17 * * * node /scripts/jd_shake.js >> /scripts/logs/jd_shake.log 2>&1
 # 店铺签到
-0 1,17 * * *   node /scripts/jd_ShopSign.js >> /scripts/logs/jd_ShopSign.log 2>&1
-
+0 1,17 * * * node /scripts/jd_ShopSign.js >> /scripts/logs/jd_ShopSign.log 2>&1
+# 保价
+0 12 */3 * * node /scripts/jd_priceProtect.js >> /scripts/logs/jd_priceProtect.log 2>&1
 
 ##############默认注释活动##############
 # 京东试用（默认注释，请配合取关脚本使用）
