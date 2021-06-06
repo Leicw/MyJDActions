@@ -30,12 +30,8 @@
 35 1,22 * * * node /scripts/jd_nzmh.js >> /scripts/logs/jd_nzmh.log 2>&1
 #母婴跳一跳 
 1 0,11,21 * * * node /scripts/jd_jump.js >> /scripts/logs/jd_jump.log 2>&1
-#人头马
-20 10,19 20-31 5 * node /scripts/jd_martin.js >> /scripts/logs/jd_martin.log 2>&1
 #手机狂欢城
 0 0-18/6 * * * node /scripts/jd_carnivalcity.js >> /scripts/logs/jd_carnivalcity.log 2>&1
-#城城分现金
-0 0-23/3 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
 #金榜创造营
 40 9,21 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
 #动物联盟
@@ -67,7 +63,15 @@
 #京享值pk
 15 0,6,13,19,21 * 6 * node /scripts/jd_pk.js >> /scripts/logs/jd_pk.log 2>&1
 #大牌联合618提前购
-16 23,6 3-13 6 * node /scripts/jd_618Opencard01.js >> /scripts/logs/jd_618Opencard01.log 2>&1
+0 23,6 3-18 6 * node /scripts/jd_618Opencard01.js >> /scripts/logs/jd_618Opencard01.log 2>&1
+#大牌联合618提前购
+01 23,6 3-18 6 * node /scripts/jd_618Opencard02.js >> /scripts/logs/jd_618Opencard02.log 2>&1
+#大牌联合618提前购
+02 23,6 3-18 6 * node /scripts/jd_618Opencard03.js >> /scripts/logs/jd_618Opencard03.log 2>&1
+#大牌联合618提前购
+04 23,6 3-18 6 * node /scripts/jd_618Opencard04.js >> /scripts/logs/jd_618Opencard04.log 2>&1
+#大牌联合618提前购
+05 23,6 3-18 6 * node /scripts/jd_618Opencard05.js >> /scripts/logs/jd_618Opencard05.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
